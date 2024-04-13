@@ -1,8 +1,9 @@
 use bevy::{prelude::*, window::WindowResolution};
 
+mod camera;
 mod hud;
 mod ui;
-mod camera;
+mod world;
 
 static APP_NAME: &str = "Ludum Dare 55";
 
@@ -40,6 +41,7 @@ fn main() {
         ui::Plugin,
         camera::Plugin,
         hud::Plugin,
+        world::Plugin,
     ));
 
     // workaround to fix scroll issues
